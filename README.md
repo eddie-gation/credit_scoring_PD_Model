@@ -1,16 +1,24 @@
 # 💳 End-to-End Credit Risk Scorecard Development
-> **Predicting Probability of Default (PD) and Constructing an Operational Scorecard using LendingClub Data**
-
-This project demonstrates a rigorous financial risk modeling pipeline, transitioning from raw data to a production-ready **Credit Scorecard (300-850 range)**. It covers the entire lifecycle of PD modeling, emphasizing statistical validity, feature engineering (WoE), and business strategy formulation.
-
+ 
+**Predicting Probability of Default (PD) and Constructing an Operational Scorecard using LendingClub Data**
+ 
+> 💡 This project demonstrates a complete financial risk modeling pipeline—from raw data preprocessing to a production-ready Credit Scorecard (300-850 range). I learned and applied industry-standard methodologies including Weight of Evidence (WoE) transformation, Information Value (IV) analysis, and statistical significance testing to build an interpretable and auditable model.
 ---
 
 ## 📊 Executive Summary
-* **Model**: Logistic Regression with custom P-value significance testing.
-* **Performance**: AUC-ROC **~0.689**, Gini Coefficient **~0.379**.
-* **Key Methodology**: Weight of Evidence (WoE) Binning, Information Value (IV) Analysis, and Scorecard Scaling (PDO 20).
-* **Business Output**: Optimal Cut-off strategy based on the trade-off between Approval Rate and Bad Rate.
-
+ 
+| Component | Specification |
+|-----------|--------------|
+| **Model** | Logistic Regression with custom p-value significance testing |
+| **Performance** | AUC-ROC: 0.690, Gini: 0.379, KS Statistic: 0.277 |
+| **Methodology** | Weight of Evidence (WoE) Binning, Information Value (IV) Analysis, PDO-based Scaling |
+| **Business Output** | Optimal cut-off strategy balancing approval rate vs. bad rate |
+| **Dataset** | LendingClub Loan Data (2007-2014, ~466K records) |
+ 
+**What I'm Most Proud Of:**
+- Implemented a custom `LogisticRegression_with_p_values` class from scratch using the Cramer-Rao bound to compute statistical significance—a feature not available in scikit-learn
+- Transformed 100+ raw features into statistically validated, interpretable predictors through rigorous WoE/IV analysis
+- Built an end-to-end pipeline that mirrors real-world credit risk workflows used by financial institutions
 ---
 
 ## 🔍 1. Data Engineering & Risk Analysis (`preprocessing.ipynb`)
