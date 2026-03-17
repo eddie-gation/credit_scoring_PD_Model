@@ -7,7 +7,7 @@ This project demonstrates a rigorous financial risk modeling pipeline, transitio
 
 ## 📊 Executive Summary
 * **Model**: Logistic Regression with custom P-value significance testing.
-* **Performance**: AUC-ROC **~0.702**, Gini Coefficient **~0.404**.
+* **Performance**: AUC-ROC **~0.689**, Gini Coefficient **~0.379**.
 * **Key Methodology**: Weight of Evidence (WoE) Binning, Information Value (IV) Analysis, and Scorecard Scaling (PDO 20).
 * **Business Output**: Optimal Cut-off strategy based on the trade-off between Approval Rate and Bad Rate.
 
@@ -35,8 +35,10 @@ Beyond predictive power, this project focuses on the **statistical rigor** requi
 * **Backwards Elimination**:
     * Refined the model by iteratively removing features with p-values > 0.05 (e.g., `purpose:educational`), ensuring a parsimonious and stable model.
 * **Validation Metrics**:
-    * **AUC-ROC & Gini**: Confirmed strong discriminatory power.
+    * **AUC-ROC & Gini**: Confirmed stable discriminatory power (Gini: 0.379).
+    ![Gini Curve](image/Gini_curve.png)
     * **KS Statistic**: Verified the maximum separation between 'Good' and 'Bad' populations.
+    ![KS Statistic](image/KS_statistic.png)
 
 ---
 
@@ -47,40 +49,22 @@ The final stage involved translating abstract probabilities into an intuitive **
 * **Scaling Logic (PDO 20)**:
     * **Target Score**: 600 points at 19:1 Odds.
     * **Points to Double Odds (PDO)**: Set to 20, meaning a score increase of 20 points halves the probability of default.
-    * **Result**: Generated a score distribution ranging from **350 to 840**, following a near-normal distribution.
+    * **Result**: Generated a score distribution ranging from **350 to 850**, following a near-normal distribution.
+    ![Score Distribution](image/Score%20Distribution.png)
 
-* **Optimal Cut-off Strategy**:
-    * **Trade-off Analysis**: Analyzed the relationship between **Approval Rate** and **Bad Rate**.
-    * **Strategic Recommendation**: Based on the trade-off curve, I analyzed how changing the Cut-off score (e.g., to 620 points) impacts both the business volume (Approval Rate) and risk level (Bad Rate).
+    * **Trade-off Analysis**: Based on the trade-off curve, I analyzed how changing the Cut-off score impacts both the business volume (Approval Rate) and risk level (Bad Rate).
+    ![Trade-off Curve](image/Approval%20Rate%20vs%20Bad%20Rate%20Trade-off.png)
 
 ---
 
 ## 🛠️ Tech Stack
-* **Language**: Python 3.x
+* **Language**: Python
 * **Data Analysis**: Pandas, NumPy
 * **Modeling/Stats**: Scikit-learn, SciPy
 * **Visualization**: Matplotlib, Seaborn
 
-## 💡 Key Learnings (Internship Focus)
+## 💡 Key Learnings 
 1. **Domain Expertise**: Learned how WoE binning and Scaling make models "auditable" and "interpretable" for financial institutions.
 2. **Decision Science**: Realized that a modeler's job is not just to predict, but to provide the **trade-off insights** necessary for executive decision-making.
 
----
-
-## 📷 Visualizations
-*(Note: Please replace the placeholders below with your actual exported image paths)*
-
-### 1. Score Distribution
-Describes how the final credit scores are distributed among the test population.
-![Score Distribution](path/to/your/score_dist_hist.png)
-
-### 2. Good vs Bad Customer Separation
-KDE plot showing the separation between actual defaulters and non-defaulters.
-![Good vs Bad KDE](path/to/your/kde_plot.png)
-
-### 3. Approval Rate vs. Bad Rate Trade-off
-Strategic tool used to determine the optimal cut-off score.
-![Trade-off Curve](path/to/your/tradeoff_plot.png)
-
----
-**Contact**: [Seonghyuek Kim] | [seonghyuek.kim@gmail.com] |
+The end.
