@@ -17,7 +17,7 @@ This project began with a small spark of curiosity during a Credit Scoring cours
 | **Performance** | AUC-ROC: 0.690, Gini: 0.379, KS Statistic: 0.277 |
 | **Methodology** | Weight of Evidence (WoE) Binning, Information Value (IV) Analysis, PDO-based Scaling |
 | **Business Output** | Optimal cut-off strategy balancing approval rate vs. bad rate |
-| **Dataset** | LendingClub Loan Data (2007-2014, ~800K records) |
+| **Dataset** | LendingClub Loan Data (2007-2014, ~466K records) |
  
 **What I'm Most Proud Of:**
 ## 🏆 Key Technical Achievements
