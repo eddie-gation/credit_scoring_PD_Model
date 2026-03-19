@@ -79,7 +79,7 @@ I used the "Points to Double Odds" (PDO) method. By setting PDO to 20 and a base
 
 ## 💡 Key Learnings & Future Steps
 * **Ownership of the Full Pipeline**: 
-This project was a journey to move beyond pre-made SAS templates. By reconstructing the entire PD model in Python, I now fully **"own" the process**—from messy data cleaning to the final credit decision. This hands-on experience gave me the confidence to build and troubleshoot a financial model from scratch.
+This project was a journey to move beyond pre-made SAS templates from the lecture. By reconstructing the entire PD model in Python, I now fully **"own" the process**—from messy data cleaning to the final credit decision. This hands-on experience gave me the confidence to build and troubleshoot a financial model from scratch.
 
 * **The Necessity of Domain Knowledge**: 
 I realized that data doesn't speak for itself in credit risk. Applying **WoE** and **Monotonicity checks** taught me that a modeler must have deep financial intuition to ensure the model makes sense in a real-world banking context. It's not just about the numbers; it's about the financial logic behind them.
