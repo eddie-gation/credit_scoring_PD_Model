@@ -1,0 +1,12 @@
+*.csv
+*.xlsx
+*.zip
+*.gz
+*.pkl
+
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+
+.DS_Store
